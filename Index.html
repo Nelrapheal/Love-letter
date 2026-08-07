@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Momma</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&display=swap');
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: radial-gradient(ellipse at 30% 20%, #3a2028 0%, #241318 55%, #180b0f 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+
+  .paper {
+    position: relative;
+    width: min(560px, 90vw);
+    background: #fbeae1;
+    background-image:
+      radial-gradient(rgba(92,42,52,0.035) 1px, transparent 1px),
+      radial-gradient(rgba(92,42,52,0.025) 1px, transparent 1px);
+    background-size: 3px 3px, 7px 7px;
+    background-position: 0 0, 2px 3px;
+    padding: 52px 42px 60px;
+    transform: rotate(-0.6deg);
+    box-shadow:
+      0 2px 0 rgba(255,255,255,0.4) inset,
+      0 30px 60px -15px rgba(0,0,0,0.55),
+      0 8px 20px -6px rgba(0,0,0,0.4);
+    clip-path: polygon(
+      0% 1%, 4% 0%, 12% 0.6%, 20% 0%, 29% 0.8%, 38% 0%, 47% 0.5%, 56% 0%,
+      65% 0.7%, 74% 0%, 83% 0.5%, 92% 0%, 100% 0.8%,
+      100% 99%, 94% 100%, 86% 99.4%, 78% 100%, 69% 99.3%, 60% 100%,
+      51% 99.5%, 42% 100%, 33% 99.3%, 24% 100%, 15% 99.4%, 6% 100%, 0% 99.2%
+    );
+  }
+
+  .paper::before {
+    content: "";
+    position: absolute;
+    inset: 14px;
+    border: 1px solid rgba(92,42,52,0.15);
+    pointer-events: none;
+  }
+
+  .dateline {
+    font-style: italic;
+    font-weight: 500;
+    color: #8a5a63;
+    font-size: 17px;
+    letter-spacing: 0.02em;
+    margin-bottom: 22px;
+  }
+
+  .body-text {
+    font-family: 'Caveat', cursive;
+    color: #5c2a34;
+    font-size: 27px;
+    line-height: 1.45;
+    white-space: pre-wrap;
+  }
+
+  .seal {
+    position: absolute;
+    bottom: -18px;
+    right: 34px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #c79a5e, #a67a3f 65%, #8a6431 100%);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.45), inset 0 -3px 6px rgba(0,0,0,0.25), inset 0 2px 4px rgba(255,255,255,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 22px;
+    color: #4a2f16;
+    transform: rotate(-8deg);
+  }
+
+  .save-btn {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: #f3e4d7;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(243,228,215,0.35);
+    padding: 10px 24px;
+    border-radius: 999px;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: background 0.2s ease, transform 0.15s ease;
+  }
+  .save-btn:hover { background: rgba(255,255,255,0.14); transform: translateY(-1px); }
+  .save-btn:active { transform: translateY(0px); }
+
+  .hint {
+    color: rgba(243,228,215,0.55);
+    font-size: 13px;
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="paper" id="letter">
+      <div class="dateline">Lagos ✦ for my Momma</div>
+      <div class="body-text">My Momma ❤️,
+
+I just felt like writing you something today because sometimes I don't think I tell you enough how much you mean to me.
+
+I love the way you love me. I love your clinginess, your random messages, the way you want my attention, the way you call me baby and okomi, and even the little things you probably don't think twice about. Somehow, you always find a way to make yourself a part of my day.
+
+You're genuinely one of the sweetest parts of my life, and I'm grateful that out of everyone I could have met, I met you. I don't just love how beautiful you are, I love the person behind that beauty. Your heart, your softness, your craziness 😭, your little moods, everything that makes you YOU.
+
+And if I could give you one thing right now, it would be the ability to see yourself through my eyes for just five minutes. Maybe then you'd understand why I look at you and think, "How did I actually get this lucky?" 🥹❤️
+
+So whenever you're having one of those days where you don't feel like smiling, remember that somewhere there's a very stubborn boy who is completely obsessed with his girl and would still choose her over and over again.
+
+You're my Momma, my baby, my beautiful girl, and one of the people I never want to take for granted.
+
+Now come here and give your man his attention because this letter was not free 😭🤲❤️</div>
+      <div class="seal">B</div>
+    </div>
+    <button class="save-btn" onclick="saveImage()">Save as image</button>
+    <div class="hint">Tap to download a picture of this letter</div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+  function saveImage() {
+    const btn = document.querySelector('.save-btn');
+    const hint = document.querySelector('.hint');
+    btn.textContent = 'Preparing...';
+    html2canvas(document.getElementById('letter'), {
+      backgroundColor: null,
+      scale: 3,
+      useCORS: true
+    }).then(canvas => {
+      const link = document.createElement('a');
+      link.download = 'for-my-momma.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      btn.textContent = 'Save as image';
+    }).catch(() => {
+      btn.textContent = 'Save as image';
+      hint.textContent = 'Could not save — try a screenshot instead';
+    });
+  }
+</script>
+</body>
+</html>
